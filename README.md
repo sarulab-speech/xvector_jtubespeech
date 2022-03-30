@@ -1,5 +1,7 @@
 # X-Vectors in JTubeSpeech Corpus
 
+[X-Vectors](https://www.danielpovey.com/files/2018_icassp_xvectors.pdf) をJTubeSpeechコーパスで訓練したモデルです。
+
 ## usage
 
 ```
