@@ -1,8 +1,8 @@
 from pathlib import Path
 import torch
 import torch.nn as nn
-from xvector_jtubespeech.network.tdnn import TDNN
-
+from .tdnn import TDNN
+# from xvector_jtubespeech.network.tdnn import TDNN
 
 def XVector(model_path="./xvector.pth"):
     model_not_exist_msg = (
