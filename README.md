@@ -38,7 +38,7 @@ def extract_xvector(
 
 _, wav = wavfile.read("sample.wav") # 16bit mono
 model = XVector("xvector.pth")
-xvector = extract_xvector(model, wav) # [1, 512]
+xvector = extract_xvector(model, wav) # [512, ]
 ```
 
 ## Contributors / 貢献者
