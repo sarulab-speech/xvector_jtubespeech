@@ -10,7 +10,7 @@ This repository provides a pre-trained model for extracting the [x-vector](https
 - Feature: 24-dimensional MFCC
 - Dimensionality of x-vector: 512
 - Other configurations: followed the ASV recipe for VoxCeleb in Kaldi.
-  - In the opensourced model, model parameters of recognition layers following to the x-vector layer were randomized to prevent data privacy.
+  - In the opensourced model, model parameters of recognition layers following to the x-vector layer were randomized to protect data privacy.
 
 ## Usage / 使い方
 ```
