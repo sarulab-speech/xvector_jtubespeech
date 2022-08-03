@@ -31,19 +31,22 @@ def extract_xvector(
   mfcc = mfcc.unsqueeze(0)
 
   # extract xvector
-  xvector = model.vectorize(mfcc) # [1, 512]
+  xvector = model.vectorize(mfcc) # (1, 512)
   xvector = xvector.to("cpu").detach().numpy().copy()[0]  
 
   return xvector
 
 _, wav = wavfile.read("sample.wav") # 16bit mono
 model = XVector("xvector.pth")
-xvector = extract_xvector(model, wav) # [512, ]
+xvector = extract_xvector(model, wav) # (512, )
 ```
 
 ## Contributors / 貢献者
 - Takaki Hamada / 濱田 誉輝 (The University of Tokyo / 東京大学)
 - Shinnosuke Takamichi / 高道 慎之介 (The University of Tokyo / 東京大学)
+
+## License / ライセンス
+MIT
 
 ## Others / その他
 - The audio sample `sample.wav` was copied from [PJS corpus](https://sites.google.com/site/shinnosuketakamichi/research-topics/pjs_corpus).
