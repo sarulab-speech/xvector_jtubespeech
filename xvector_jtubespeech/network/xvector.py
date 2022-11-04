@@ -3,7 +3,6 @@ import torch
 import torch.nn as nn
 from .tdnn import TDNN
 
-
 def XVector(model_path="./xvector.pth"):
     model_not_exist_msg = (
         f"[error] dumped file of model's state dict does not exist at {model_path}"
