@@ -42,3 +42,17 @@ MFCCは [`torchaudio.compliance.kaldi.mfcc`](https://pytorch.org/audio/stable/co
 >>> xvector.shape
 torch.Size([1, 512])
 ```
+
+## module
+このディレクトリをmoduleとしてimportすることで利用可能です。
+以下の使用例を参考にしてください
+
+```
+>>> from xvector_jtubeech import XVector # このディレクトリをpathに追加
+>>> model = XVector()                    # モデルを読み込み
+>>> x = model("test.wav")                # ファイルのpathを与える
+>>> x.shape
+torch.Size([512])
+```
+
+
