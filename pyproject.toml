@@ -1,0 +1,20 @@
+[build-system]
+requires=["hatchling"]
+build-backend= "hatchling.build"
+[project]
+name="xvector_jtubespeech"
+version="0.0.1"
+description="Pre-trained model for extracting the x-vector (speaker representation vector)"
+readme="README.md"
+requires-python=">=3.8"
+
+dependencies = [
+  "numpy>=1.22.3",
+  "scipy>=1.8.0",
+  "torch>=1.10.2",
+  "torchaudio>=0.10.2"
+]
+
+[tool.hatch.build.targets.xvector_jtubespeech]
+[tool.hatch.build]
+include = ["xvector_jtubespeech/"]

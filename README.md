@@ -12,6 +12,11 @@ This repository provides a pre-trained model for extracting the [x-vector](https
 - Other configurations: followed the ASV recipe for VoxCeleb in Kaldi.
   - In the opensourced model, model parameters of recognition layers following to the x-vector layer were randomized to protect data privacy.
 
+## Installation
+```bash
+pip install xvector-jtubespeech
+```
+
 ## Usage / 使い方
 ```
 import numpy as np
