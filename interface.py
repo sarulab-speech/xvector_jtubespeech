@@ -5,12 +5,6 @@ from torchaudio.compliance import kaldi
 
 from .xvector_jtubespeech import XVector as XVectorImpl
 
-def load_wav(wav_path, sample_rate):
-    waveform, sr = torchaudio.load(wav_path, normalize=True)
-    if sample_rate != sr:
-        waveform = torchaudio.transforms.Resample(sr, sample_rate)(waveform)
-    return waveform[0]
-
 class XVector:
     def __init__(self):
         model_path = os.path.join(
@@ -28,6 +22,12 @@ class XVector:
         return self.model.vectorize(mfcc)
 
     def __call__(self, wav_fname):
-        data = load_wav(wav_fname, 16000)
+        data = self.load_wav(wav_fname)
         return self.calc_from_wav(data)[0]
+
+    def load_wav(self, wav_path, sample_rate=16000):
+        waveform, sr = torchaudio.load(wav_path, normalize=True)
+        if sample_rate != sr:
+            waveform = torchaudio.transforms.Resample(sr, sample_rate)(waveform)
+        return waveform[0]
 
